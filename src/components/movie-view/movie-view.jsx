@@ -1,5 +1,8 @@
 import React from 'react';
 
+let imgStyle = {
+  height: '500px'
+}
 class MovieView extends React.Component {
 
   render() {
@@ -8,7 +11,7 @@ class MovieView extends React.Component {
     return (
       <div className="movie-view">
         <div className="movie-poster">
-          <img src={movie.Poster} />
+          <img src={movie.Poster} style={imgStyle} />
         </div>
         <div className="movie-title">
           <span className="label">Title: </span>
