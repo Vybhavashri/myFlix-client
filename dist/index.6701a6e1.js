@@ -22897,7 +22897,26 @@ var _movieCard = require("../movie-card/movie-card");
 var _movieCardDefault = parcelHelpers.interopDefault(_movieCard);
 var _movieView = require("../movie-view/movie-view");
 var _movieViewDefault = parcelHelpers.interopDefault(_movieView);
-let imgPath = '../../img/';
+var _theShawshankRedemptionJpg = require("../../img/The Shawshank Redemption.jpg");
+var _theShawshankRedemptionJpgDefault = parcelHelpers.interopDefault(_theShawshankRedemptionJpg);
+var _theGodfatherJpg = require("../../img/The Godfather.jpg");
+var _theGodfatherJpgDefault = parcelHelpers.interopDefault(_theGodfatherJpg);
+var _theGodfatherPartIIJpg = require("../../img/The Godfather Part II.jpg");
+var _theGodfatherPartIIJpgDefault = parcelHelpers.interopDefault(_theGodfatherPartIIJpg);
+var _theGodfatherPartIIIJpg = require("../../img/The Godfather Part III.jpg");
+var _theGodfatherPartIIIJpgDefault = parcelHelpers.interopDefault(_theGodfatherPartIIIJpg);
+var _theDarkKnightJpg = require("../../img/The Dark Knight.jpg");
+var _theDarkKnightJpgDefault = parcelHelpers.interopDefault(_theDarkKnightJpg);
+var _theLordOfTheRingsTheReturnOfTheKingJpg = require("../../img/The Lord of the Rings The Return of the King.jpg");
+var _theLordOfTheRingsTheReturnOfTheKingJpgDefault = parcelHelpers.interopDefault(_theLordOfTheRingsTheReturnOfTheKingJpg);
+var _batmanBeginsJpg = require("../../img/Batman Begins.jpg");
+var _batmanBeginsJpgDefault = parcelHelpers.interopDefault(_batmanBeginsJpg);
+var _theDarkKnightRisesJpg = require("../../img/The Dark Knight Rises.jpg");
+var _theDarkKnightRisesJpgDefault = parcelHelpers.interopDefault(_theDarkKnightRisesJpg);
+var _theLordOfTheRingsTheFellowshipOfTheRingJpg = require("../../img/The Lord of the Rings The Fellowship of the Ring.jpg");
+var _theLordOfTheRingsTheFellowshipOfTheRingJpgDefault = parcelHelpers.interopDefault(_theLordOfTheRingsTheFellowshipOfTheRingJpg);
+var _schindlerSListJpg = require("../../img/Schindler's List.jpg");
+var _schindlerSListJpgDefault = parcelHelpers.interopDefault(_schindlerSListJpg);
 class MainView extends _reactDefault.default.Component {
     constructor(){
         super();
@@ -22907,7 +22926,7 @@ class MainView extends _reactDefault.default.Component {
                     "_id": {
                         "$oid": "6192c3afdb50bdac425b73ba"
                     },
-                    "Poster": imgPath + "The Shawshank Redemption.jpg",
+                    "Poster": _theShawshankRedemptionJpgDefault.default,
                     "Title": "The Shawshank Redemption",
                     "Genre": {
                         "Name": "Drama",
@@ -22934,7 +22953,7 @@ class MainView extends _reactDefault.default.Component {
                     "_id": {
                         "$oid": "6192c3afdb50bdac425b73bb"
                     },
-                    "Poster": imgPath + "The Godfather.jpg",
+                    "Poster": _theGodfatherJpgDefault.default,
                     "Title": "The Godfather",
                     "Genre": {
                         "Name": "Crime",
@@ -22961,7 +22980,7 @@ class MainView extends _reactDefault.default.Component {
                     "_id": {
                         "$oid": "6192c3afdb50bdac425b73bc"
                     },
-                    "Poster": imgPath + "The Godfather Part II.jpg",
+                    "Poster": _theGodfatherPartIIJpgDefault.default,
                     "Title": "The Godfather: Part II",
                     "Genre": {
                         "Name": "Crime",
@@ -22988,7 +23007,7 @@ class MainView extends _reactDefault.default.Component {
                     "_id": {
                         "$oid": "6192c3afdb50bdac425b73bd"
                     },
-                    "Poster": imgPath + "The Godfather Part III.jpg",
+                    "Poster": _theGodfatherPartIIIJpgDefault.default,
                     "Title": "The Godfather: Part III",
                     "Genre": {
                         "Name": "Crime",
@@ -23015,7 +23034,7 @@ class MainView extends _reactDefault.default.Component {
                     "_id": {
                         "$oid": "6192c3afdb50bdac425b73be"
                     },
-                    "Poster": imgPath + "The Dark Knight.jpg",
+                    "Poster": _theDarkKnightJpgDefault.default,
                     "Title": "The Dark Knight",
                     "Genre": {
                         "Name": "Adventure",
@@ -23040,7 +23059,7 @@ class MainView extends _reactDefault.default.Component {
                     "_id": {
                         "$oid": "6192c3afdb50bdac425b73bf"
                     },
-                    "Poster": imgPath + "The Lord of the Rings The Return of the King.jpg",
+                    "Poster": _theLordOfTheRingsTheReturnOfTheKingJpgDefault.default,
                     "Title": "The Lord of the Rings: The Return of the King",
                     "Genre": {
                         "Name": "Drama",
@@ -23067,7 +23086,7 @@ class MainView extends _reactDefault.default.Component {
                     "_id": {
                         "$oid": "6192c3afdb50bdac425b73c0"
                     },
-                    "Poster": imgPath + "Batman Begins.jpg",
+                    "Poster": _batmanBeginsJpgDefault.default,
                     "Title": "Batman Begins",
                     "Genre": {
                         "Name": "Adventure",
@@ -23092,7 +23111,7 @@ class MainView extends _reactDefault.default.Component {
                     "_id": {
                         "$oid": "6192c3afdb50bdac425b73c1"
                     },
-                    "Poster": imgPath + "The Dark Knight Rises.jpg",
+                    "Poster": _theDarkKnightRisesJpgDefault.default,
                     "Title": "The Dark Knight Rises",
                     "Genre": {
                         "Name": "Adventure",
@@ -23117,7 +23136,7 @@ class MainView extends _reactDefault.default.Component {
                     "_id": {
                         "$oid": "6192c3afdb50bdac425b73c2"
                     },
-                    "Poster": imgPath + "The Lord of the Rings The Fellowship of the Ring.jpg",
+                    "Poster": _theLordOfTheRingsTheFellowshipOfTheRingJpgDefault.default,
                     "Title": "The Lord of the Rings: The Fellowship of the Ring",
                     "Genre": {
                         "Name": "Drama",
@@ -23144,7 +23163,7 @@ class MainView extends _reactDefault.default.Component {
                     "_id": {
                         "$oid": "6192c3afdb50bdac425b73c3"
                     },
-                    "Poster": imgPath + "Schindler's List.jpg",
+                    "Poster": _schindlerSListJpgDefault.default,
                     "Title": "Schindler's List",
                     "Genre": {
                         "Name": "Biography",
@@ -23182,7 +23201,7 @@ class MainView extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 37
+                lineNumber: 46
             },
             __self: this,
             children: "The list is empty!"
@@ -23191,7 +23210,7 @@ class MainView extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 40
+                lineNumber: 49
             },
             __self: this,
             children: selectedMovie ? /*#__PURE__*/ _jsxRuntime.jsx(_movieViewDefault.default, {
@@ -23201,7 +23220,7 @@ class MainView extends _reactDefault.default.Component {
                 },
                 __source: {
                     fileName: "src/components/main-view/main-view.jsx",
-                    lineNumber: 42
+                    lineNumber: 51
                 },
                 __self: this
             }) : movies.map((movie)=>/*#__PURE__*/ _jsxRuntime.jsx(_movieCardDefault.default, {
@@ -23211,7 +23230,7 @@ class MainView extends _reactDefault.default.Component {
                     },
                     __source: {
                         fileName: "src/components/main-view/main-view.jsx",
-                        lineNumber: 43
+                        lineNumber: 52
                     },
                     __self: this
                 }, movie._id)
@@ -23226,7 +23245,7 @@ exports.default = MainView;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"46hkM","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3shJS","../movie-card/movie-card":"6EiBJ","../movie-view/movie-view":"ikZdr"}],"6EiBJ":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"46hkM","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3shJS","../movie-card/movie-card":"6EiBJ","../movie-view/movie-view":"ikZdr","../../img/The Shawshank Redemption.jpg":"4w0qK","../../img/The Godfather.jpg":"gvDx7","../../img/The Dark Knight.jpg":"ikPq9","../../img/The Lord of the Rings The Return of the King.jpg":"4uCGc","../../img/Batman Begins.jpg":"a2tcf","../../img/The Dark Knight Rises.jpg":"cUxoS","../../img/The Lord of the Rings The Fellowship of the Ring.jpg":"9ePkW","../../img/Schindler's List.jpg":"c6umw","../../img/The Godfather Part II.jpg":"7WfMA","../../img/The Godfather Part III.jpg":"jcK2A"}],"6EiBJ":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$4249 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -23274,6 +23293,9 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxRuntime = require("react/jsx-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+let imgStyle = {
+    height: '500px'
+};
 class MovieView extends _reactDefault.default.Component {
     render() {
         const { movie , onBackClick  } = this.props;
@@ -23281,7 +23303,7 @@ class MovieView extends _reactDefault.default.Component {
             className: "movie-view",
             __source: {
                 fileName: "src/components/movie-view/movie-view.jsx",
-                lineNumber: 9
+                lineNumber: 12
             },
             __self: this,
             children: [
@@ -23289,14 +23311,15 @@ class MovieView extends _reactDefault.default.Component {
                     className: "movie-poster",
                     __source: {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 10
+                        lineNumber: 13
                     },
                     __self: this,
                     children: /*#__PURE__*/ _jsxRuntime.jsx("img", {
                         src: movie.Poster,
+                        style: imgStyle,
                         __source: {
                             fileName: "src/components/movie-view/movie-view.jsx",
-                            lineNumber: 11
+                            lineNumber: 14
                         },
                         __self: this
                     })
@@ -23305,7 +23328,7 @@ class MovieView extends _reactDefault.default.Component {
                     className: "movie-title",
                     __source: {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 13
+                        lineNumber: 16
                     },
                     __self: this,
                     children: [
@@ -23313,7 +23336,7 @@ class MovieView extends _reactDefault.default.Component {
                             className: "label",
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 14
+                                lineNumber: 17
                             },
                             __self: this,
                             children: "Title: "
@@ -23322,7 +23345,7 @@ class MovieView extends _reactDefault.default.Component {
                             className: "value",
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 15
+                                lineNumber: 18
                             },
                             __self: this,
                             children: movie.Title
@@ -23333,7 +23356,7 @@ class MovieView extends _reactDefault.default.Component {
                     className: "movie-genre",
                     __source: {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 17
+                        lineNumber: 20
                     },
                     __self: this,
                     children: [
@@ -23341,7 +23364,7 @@ class MovieView extends _reactDefault.default.Component {
                             className: "label",
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 18
+                                lineNumber: 21
                             },
                             __self: this,
                             children: "Genre: "
@@ -23350,7 +23373,7 @@ class MovieView extends _reactDefault.default.Component {
                             className: "value",
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 19
+                                lineNumber: 22
                             },
                             __self: this,
                             children: movie.Genre.Name
@@ -23361,7 +23384,7 @@ class MovieView extends _reactDefault.default.Component {
                     className: "movie-director",
                     __source: {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 21
+                        lineNumber: 24
                     },
                     __self: this,
                     children: [
@@ -23369,7 +23392,7 @@ class MovieView extends _reactDefault.default.Component {
                             className: "label",
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 22
+                                lineNumber: 25
                             },
                             __self: this,
                             children: "Director: "
@@ -23378,7 +23401,7 @@ class MovieView extends _reactDefault.default.Component {
                             className: "value",
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 23
+                                lineNumber: 26
                             },
                             __self: this,
                             children: movie.Director.Name
@@ -23389,7 +23412,7 @@ class MovieView extends _reactDefault.default.Component {
                     className: "movie-featured",
                     __source: {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 25
+                        lineNumber: 28
                     },
                     __self: this,
                     children: [
@@ -23397,7 +23420,7 @@ class MovieView extends _reactDefault.default.Component {
                             className: "label",
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 26
+                                lineNumber: 29
                             },
                             __self: this,
                             children: "Featured: "
@@ -23406,7 +23429,7 @@ class MovieView extends _reactDefault.default.Component {
                             className: "value",
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 27
+                                lineNumber: 30
                             },
                             __self: this,
                             children: movie.Featured
@@ -23417,7 +23440,7 @@ class MovieView extends _reactDefault.default.Component {
                     className: "movie-releaseyear",
                     __source: {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 29
+                        lineNumber: 32
                     },
                     __self: this,
                     children: [
@@ -23425,7 +23448,7 @@ class MovieView extends _reactDefault.default.Component {
                             className: "label",
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 30
+                                lineNumber: 33
                             },
                             __self: this,
                             children: "Release Year: "
@@ -23434,7 +23457,7 @@ class MovieView extends _reactDefault.default.Component {
                             className: "value",
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 31
+                                lineNumber: 34
                             },
                             __self: this,
                             children: movie.ReleaseYear
@@ -23445,7 +23468,7 @@ class MovieView extends _reactDefault.default.Component {
                     className: "movie-actors",
                     __source: {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 33
+                        lineNumber: 36
                     },
                     __self: this,
                     children: [
@@ -23453,7 +23476,7 @@ class MovieView extends _reactDefault.default.Component {
                             className: "label",
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 34
+                                lineNumber: 37
                             },
                             __self: this,
                             children: "Actors: "
@@ -23462,7 +23485,7 @@ class MovieView extends _reactDefault.default.Component {
                             className: "value",
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
-                                lineNumber: 35
+                                lineNumber: 38
                             },
                             __self: this,
                             children: movie.Actors
@@ -23475,7 +23498,7 @@ class MovieView extends _reactDefault.default.Component {
                     },
                     __source: {
                         fileName: "src/components/movie-view/movie-view.jsx",
-                        lineNumber: 37
+                        lineNumber: 40
                     },
                     __self: this,
                     children: "Back"
@@ -23491,6 +23514,71 @@ exports.default = MovieView;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"46hkM","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3shJS"}]},["lJLt9","3iCXV","dLPEP"], "dLPEP", "parcelRequireaec4")
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"46hkM","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"3shJS"}],"4w0qK":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "The Shawshank Redemption.518b94c4.jpg";
+
+},{"./helpers/bundle-url":"4HvM8"}],"4HvM8":[function(require,module,exports) {
+"use strict";
+var bundleURL = {
+};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return '/';
+}
+function getBaseURL(url) {
+    return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ('' + url).match(/(https?|file|ftp):\/\/[^/]+/);
+    if (!matches) throw new Error('Origin not found');
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"gvDx7":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "The Godfather.ad18ddb7.jpg";
+
+},{"./helpers/bundle-url":"4HvM8"}],"ikPq9":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "The Dark Knight.8e94aa70.jpg";
+
+},{"./helpers/bundle-url":"4HvM8"}],"4uCGc":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "The Lord of the Rings The Return of the King.177a33b6.jpg";
+
+},{"./helpers/bundle-url":"4HvM8"}],"a2tcf":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "Batman Begins.4f14342b.jpg";
+
+},{"./helpers/bundle-url":"4HvM8"}],"cUxoS":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "The Dark Knight Rises.23f382b8.jpg";
+
+},{"./helpers/bundle-url":"4HvM8"}],"9ePkW":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "The Lord of the Rings The Fellowship of the Ring.c165f56a.jpg";
+
+},{"./helpers/bundle-url":"4HvM8"}],"c6umw":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "Schindler's List.64aa4ee0.jpg";
+
+},{"./helpers/bundle-url":"4HvM8"}],"7WfMA":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "The Godfather Part II.aa7413cb.jpg";
+
+},{"./helpers/bundle-url":"4HvM8"}],"jcK2A":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "The Godfather Part III.1ace5774.jpg";
+
+},{"./helpers/bundle-url":"4HvM8"}]},["lJLt9","3iCXV","dLPEP"], "dLPEP", "parcelRequireaec4")
 
 //# sourceMappingURL=index.6701a6e1.js.map
