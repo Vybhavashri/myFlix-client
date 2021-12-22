@@ -25660,19 +25660,12 @@ function LoginView(props) {
                 __self: this,
                 children: "Submit"
             }),
-            /*#__PURE__*/ _jsxRuntime.jsx("tr", {
-                __source: {
-                    fileName: "src/components/login-view/login-view.jsx",
-                    lineNumber: 28
-                },
-                __self: this
-            }),
             /*#__PURE__*/ _jsxRuntime.jsx("button", {
                 type: "submit",
                 onClick: handleSubmit,
                 __source: {
                     fileName: "src/components/login-view/login-view.jsx",
-                    lineNumber: 29
+                    lineNumber: 28
                 },
                 __self: this,
                 children: "Register"
