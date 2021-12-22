@@ -25,7 +25,6 @@ function LoginView(props) {
       </label>
       <br />
       <button type="submit" onClick={handleSubmit}>Submit</button>
-      <tr />
       <button type="submit" onClick={handleSubmit}>Register</button>
     </form>
   );
