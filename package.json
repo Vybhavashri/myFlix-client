@@ -4,7 +4,8 @@
   "description": "Client-side application for myFlix API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "npx npm-force-resolutions"
   },
   "repository": {
     "type": "git",
@@ -17,11 +18,21 @@
   },
   "homepage": "https://github.com/Vybhavashri/myFlix-client#readme",
   "dependencies": {
+    "@parcel/core": "^2.0.1",
+    "ansi-html-community": "^0.0.8",
+    "axios": "^0.24.0",
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@parcel/transformer-image": "^2.0.0-rc.0",
-    "@parcel/transformer-sass": "^2.0.0-rc.0"
+    "@parcel/transformer-sass": "^2.0.0-rc.0",
+    "parcel-bundler": "^1.12.5"
+  },
+  "resolutions": {
+    "ansi-html": "https://registry.npmjs.org/ansi-html-community/-/ansi-html-community-0.0.8.tgz",
+    "glob-parent": "^6.0.1",
+    "postcss": "^8.2.10"
   }
 }
