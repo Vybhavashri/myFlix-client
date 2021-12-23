@@ -3,7 +3,20 @@ import React from 'react';
 let imgStyle = {
   height: '500px'
 }
+
 class MovieView extends React.Component {
+
+  keypressCallback(event) {
+    console.log(event.key);
+  }
+
+  componentDidMount() {
+    document.addEventListener('keypress', this.keypressCallback);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keypress', this.keypressCallback);
+  }
 
   render() {
     const { movie, onBackClick } = this.props;
@@ -17,13 +30,17 @@ class MovieView extends React.Component {
           <span className="label">Title: </span>
           <span className="value">{movie.Title}</span>
         </div>
+        <div className="movie-description">
+          <span className="label">Description: </span>
+          <span className="value">{movie.Description}</span>
+        </div>
         <div className="movie-genre">
           <span className="label">Genre: </span>
-          <span className="value">{movie.Genre.Name}</span>
+          <span className="value">{movie.Genre.Name}-{movie.Genre.Description}</span>
         </div>
         <div className="movie-director">
           <span className="label">Director: </span>
-          <span className="value">{movie.Director.Name}</span>
+          <span className="value">{movie.Director.Name}-{movie.Director.Bio}-{movie.Director.Birth}</span>
         </div>
         <div className="movie-featured">
           <span className="label">Featured: </span>
