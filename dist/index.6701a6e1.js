@@ -24254,6 +24254,7 @@ class MovieView extends _reactDefault.default.Component {
                     children: /*#__PURE__*/ _jsxRuntime.jsx("img", {
                         src: movie.Poster,
                         style: imgStyle,
+                        crossOrigin: "true",
                         __source: {
                             fileName: "src/components/movie-view/movie-view.jsx",
                             lineNumber: 27
