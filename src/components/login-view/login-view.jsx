@@ -40,4 +40,5 @@ function LoginView(props) {
     </Form>
   )
 }
+
 export default LoginView;
