@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
-import { Row, Col, Form, Button, Container } from 'react-bootstrap';
-import { Link } from "react-router-dom";
+import { Row, Col, Form, Button } from 'react-bootstrap';
 
 function RegistrationView(props) {
   const [username, setUsername] = useState('');
@@ -50,7 +49,7 @@ function RegistrationView(props) {
     e.preventDefault();
     const isReq = validate();
     if (isReq) {
-      axios.post('', {
+      axios.post('https://myflix-moviedatabaseapp.herokuapp.com/users', {
         Username: username,
         Password: password,
         EmailID: emailID,
@@ -108,7 +107,7 @@ function RegistrationView(props) {
 }
 
 RegistrationView.propTypes = {
-  register: PropTypes.shape({
+  registeration: PropTypes.shape({
     Username: PropTypes.string.isRequired,
     Password: PropTypes.string.isRequired,
     EmailID: PropTypes.string.isRequired,
