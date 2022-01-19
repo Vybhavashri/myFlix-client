@@ -38293,24 +38293,6 @@ class MovieView extends _reactDefault.default.Component {
         }));
     }
 }
-MovieView.propTypes = {
-    movie: _propTypesDefault.default.shape({
-        Title: _propTypesDefault.default.string.isRequired,
-        Description: _propTypesDefault.default.string.isRequired,
-        Genre: _propTypesDefault.default.shape({
-            Name: _propTypesDefault.default.string.isRequired,
-            Description: _propTypesDefault.default.string.isRequired
-        }),
-        Featured: _propTypesDefault.default.bool,
-        ReleaseYear: _propTypesDefault.default.number,
-        Actors: _propTypesDefault.default.array,
-        Director: _propTypesDefault.default.shape({
-            Name: _propTypesDefault.default.string.isRequired,
-            Bio: _propTypesDefault.default.string.isRequired
-        }),
-        Poster: _propTypesDefault.default.string.isRequired
-    }).isRequired
-};
 exports.default = MovieView;
 
   $parcel$ReactRefreshHelpers$3741.postlude(module);
@@ -41333,22 +41315,25 @@ function GenreView(props) {
                         })
                     ]
                 }),
-                /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
-                    to: `/`,
+                /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                    className: "backButton",
                     __source: {
                         fileName: "src/components/genre-view/genre-view.jsx",
                         lineNumber: 25
                     },
                     __self: this,
                     children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
-                        className: "returnButton",
-                        variant: "dark",
+                        size: "md",
+                        variant: "outline-primary",
+                        onClick: ()=>{
+                            onBackClick(null);
+                        },
                         __source: {
                             fileName: "src/components/genre-view/genre-view.jsx",
                             lineNumber: 26
                         },
                         __self: this,
-                        children: "Return"
+                        children: "Back"
                     })
                 })
             ]
