@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import axios from 'axios';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
@@ -46,7 +47,7 @@ class MovieView extends React.Component {
   }
 
   render() {
-    const { movie, onBackClick, user } = this.props;
+    const { movie, onBackClick } = this.props;
 
     return (
       <Container fluid className="moviesContainer" align="center">
@@ -67,13 +68,13 @@ class MovieView extends React.Component {
               </div>
               <div className="movie-genre">
                 <span className="label">Genre: </span>
-                <Link to={`/genres/${movie.Genre.Name}`}>
+                <Link to={`/movies/genre/${movie.Genre.Name}`}>
                   <span className="value">{movie.Genre.Name}</span>
                 </Link>
               </div>
               <div className="movie-director">
                 <span className="director">Director: </span>
-                <Link to={`/directors/${movie.Director.Name}`}>
+                <Link to={`/movies/directors/${movie.Director.Name}`}>
                   <span className="value">{movie.Director.Name}</span>
                 </Link>
               </div>
