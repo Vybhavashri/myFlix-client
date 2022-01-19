@@ -22,9 +22,9 @@ function GenreView(props) {
           <span className="label">Description: </span>
           <span className="value">{Genre.Description}</span>
         </div>
-        <Link to={`/`}>
-          <Button className='returnButton' variant='dark'>Return</Button>
-        </Link>
+        <div className="backButton">
+          <Button size="md" variant="outline-primary" onClick={() => { onBackClick(null); }}>Back</Button>
+        </div>
       </Col>
     </Row>
   )
