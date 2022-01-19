@@ -254,6 +254,7 @@ ProfileView.propTypes = {
     Password: PropTypes.string.isRequired,
     EmailID: PropTypes.string.isRequired,
     Birth: PropTypes.string,
+    FavouriteMovies: PropTypes.array
   }),
 };
 
