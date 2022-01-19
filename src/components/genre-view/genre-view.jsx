@@ -1,39 +1,33 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Container, Card, Button } from "react-bootstrap";
+import { Col, Row, Button } from "react-bootstrap";
+
+import { Link } from 'react-router-dom';
 
 import "./genre-view.scss";
 
-class GenreView extends React.Component {
-  render() {
-    const { Genre, onBackClick } = this.props;
+function GenreView(props) {
+  const { Genre } = props;
 
-    return (
-      <Container>
-        <br />
-        <Card align="center">
-          <h4>{Genre.Name}</h4>
-          <Card.Body>
-            <div>
-              <span className="label">Description: </span>
-              <span className="value">{Genre.Description}</span>
-            </div>
-            <br />
-            <div className="backButton">
-              <Button size="md" variant="outline-primary" onClick={() => { onBackClick(null); }}>Back</Button>
-            </div>
-          </Card.Body>
-        </Card>
-      </Container>
-    );
-  }
+  console.log(Genre, 'genre')
+
+  return (
+    <Row className="genre-view">
+      <Col>
+        <div className="genre-name">
+          <span className="label">Name: </span>
+          <span className="value">{Genre.Name}</span>
+        </div>
+        <div className="genre-description">
+          <span className="label">Description: </span>
+          <span className="value">{Genre.Description}</span>
+        </div>
+        <Link to={`/`}>
+          <Button className='returnButton' variant='dark'>Return</Button>
+        </Link>
+      </Col>
+    </Row>
+  )
 }
-
-GenreView.propTypes = {
-  Genre: PropTypes.shape({
-    Name: PropTypes.string.isRequired,
-    Description: PropTypes.string.isRequired,
-  }).isRequired,
-};
 
 export default GenreView;
