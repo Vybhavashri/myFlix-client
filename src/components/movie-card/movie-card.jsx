@@ -19,10 +19,10 @@ class MovieCard extends React.Component {
 
     return (
       <Container>
-        <br />
+        <br /><br /><br /><br /><br />
         <Row>
           <Card align="center">
-            <Card.Img variant="top" src={movie.Poster} crossOrigin="true" width="300" height="350" />
+            <Card.Img variant="top" src={movie.Poster} crossOrigin="true" width="250" height="350" />
             <Card.Body>
               <Card.Title>{movie.Title}</Card.Title>
               <Card.Text>{movie.Description}</Card.Text>
