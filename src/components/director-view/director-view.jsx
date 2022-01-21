@@ -1,49 +1,36 @@
 import React from "react";
 import PropTypes from "prop-types";
-
-import { Container, Card, Button } from "react-bootstrap";
+import { Container, Card, Row, Button } from "react-bootstrap";
 
 import "./director-view.scss";
 
-class DirectorView extends React.Component {
-  render() {
-    const { Director, onBackClick } = this.props;
+function DirectorView(props) {
+  const { Director, onBackClick } = props;
 
-    return (
-      <Container>
-        <br />
+  return (
+    < Container >
+      <br /><br /><br /><br /><br />
+      <Row className="director-view">
         <Card align="center">
-          <h4>Director</h4>
           <Card.Body>
-            <div>
-              <span className="label">Name: </span>
-              <span className="value">{Director.Name}</span>
-            </div>
-            <div>
-              <span className="label">Bio: </span>
-              <span className="value">{Director.Bio}</span>
-            </div>
-            <div>
-              <span className="label">Born: </span>
-              <span className="value">{Director.Birth}</span>
-            </div>
+            <Card.Title>{Director.Name}</Card.Title>
+            <Card.Text>{Director.Bio}</Card.Text>
+            <Card.Text>{Director.Birth}</Card.Text>
             <br />
-            <div className="backButton">
-              <Button size="md" variant="outline-primary" onClick={() => { onBackClick(null); }}>Back</Button>
-            </div>
+            <Button variant="outline-primary" className="btn-outline-primary" onClick={() => { onBackClick(null); }}>Back</Button>
           </Card.Body>
         </Card>
-      </Container>
-    );
-  }
+      </Row>
+    </Container >
+  )
 }
 
-DirectorView.proptypes = {
+DirectorView.propTypes = {
   Director: PropTypes.shape({
     Name: PropTypes.string.isRequired,
-    Bio: PropTypes.string,
-    Birth: PropTypes.number
-  }).isRequired,
+    Bio: PropTypes.string.isRequired,
+    Birth: PropTypes.string.isRequired
+  }).isRequired
 };
 
 export default DirectorView;
