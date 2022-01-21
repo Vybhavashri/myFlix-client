@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function LoginView(props) {
   const [username, setUsername] = useState('');
@@ -45,6 +46,7 @@ function LoginView(props) {
         })
         .catch(e => {
           console.log('No such user')
+          alert('Cannot Login. Try again')
         });
     }
   };
@@ -67,7 +69,9 @@ function LoginView(props) {
       <Button variant="primary" type="submit" onClick={handleSubmit}>
         Submit
       </Button>
-      <Button variant='primary' type='submit'>Register</Button>
+      <Link to={'/register'}>
+        <Button variant='primary' type='submit'>Register</Button>
+      </Link>
     </Form>
   )
 }
