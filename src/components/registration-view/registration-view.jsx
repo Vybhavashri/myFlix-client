@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 
 import { Row, Col, Form, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 function RegistrationView(props) {
   const [username, setUsername] = useState('');
@@ -98,8 +99,9 @@ function RegistrationView(props) {
           </Form.Group>
 
           <Button variant='primary' type='submit' onClick={handleSubmit}>Submit</Button>
-
-          <Button variant='primary' type='submit'>Login</Button>
+          <Link to='/'>
+            <Button variant='primary' type='submit'>Login</Button>
+          </Link>
         </Form>
       </Col>
     </Row>
