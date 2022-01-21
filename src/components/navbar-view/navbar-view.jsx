@@ -13,18 +13,13 @@ function NavBarView() {
   };
 
   return (
-    <Navbar className="navbar" variant="dark" expand="lg md" fixed="top">
-      <Container fluid>
+    <Navbar className="navbar" variant="dark" expand="lg md" fixed="top" align="center">
+      <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse>
           <Nav className="me-auto navbar-menu">
-            <Link to={`/users/${user}`}>
-              <NavItem style={{ color: "white" }} href="">
-                User Profile
-              </NavItem>
-            </Link>
-            <NavItem style={{ color: "grey", paddingLeft: "25px" }}>
-              <p>( Logged in as: <Link to={`/users/${user}`} >{user}</Link> )</p>
+            <NavItem>
+              Logged in as: <Link to={`/users/${user}`} >{user}</Link>
             </NavItem>
           </Nav>
           <Nav.Link className="d-flex">
