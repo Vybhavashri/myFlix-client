@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import { BrowserRouter as Router, Route, Routes, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
 import LoginView from '../login-view/login-view';
 import MovieCard from '../movie-card/movie-card';
@@ -12,8 +12,7 @@ import DirectorView from '../director-view/director-view';
 import GenreView from '../genre-view/genre-view';
 import NavBarView from '../navbar-view/navbar-view';
 
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Row, Col } from 'react-bootstrap';
 
 class MainView extends React.Component {
 
