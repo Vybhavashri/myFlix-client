@@ -25,19 +25,6 @@ class ProfileView extends React.Component {
     this.getUser(accessToken);
   }
 
-  onLoggedOut() {
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-    this.setState({
-      user: null,
-    });
-    window.open("/", "_self");
-  }
-
-  onBackClick() {
-    history.goBack()
-  }
-
   getUser = (token) => {
     const Username = localStorage.getItem("user");
     axios
@@ -57,24 +44,24 @@ class ProfileView extends React.Component {
         console.log(error);
       });
   };
+
   // Allow user to edit or update profile
   editUser = (e) => {
     e.preventDefault();
     const Username = localStorage.getItem("user");
     const token = localStorage.getItem("token");
 
-    axios
-      .put(`https://myflix-moviedatabaseapp.herokuapp.com/users/${Username}`,
-        {
-          Username: this.state.Username,
-          Password: this.state.Password,
-          EmailID: this.state.EmailID,
-          Birth: this.state.Birth,
-        },
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      )
+    axios.put(`https://myflix-moviedatabaseapp.herokuapp.com/users/${Username}`,
+      {
+        Username: this.state.Username,
+        Password: this.state.Password,
+        EmailID: this.state.EmailID,
+        Birth: this.state.Birth,
+      },
+      {
+        headers: { Authorization: `Bearer ${token}` },
+      }
+    )
       .then((response) => {
         this.setState({
           Username: response.data.Username,
@@ -85,7 +72,6 @@ class ProfileView extends React.Component {
 
         localStorage.setItem("user", this.state.Username);
         const data = response.data;
-        console.log(data);
         console.log(this.state.Username);
         alert("Profile is updated!");
         window.open(`/users/${Username}`, "_self");
@@ -167,9 +153,7 @@ class ProfileView extends React.Component {
             </div>
           </Card.Text>
         </Card>
-
         <br />
-
         <Card className="update-profile">
           <Card.Body>
             <Card.Title>Update Profile</Card.Title>
@@ -199,9 +183,8 @@ class ProfileView extends React.Component {
             </Form>
           </Card.Body>
         </Card>
-
         <br />
-        <div className="backButton">
+        <div className="homeButton">
           <Link to={`/`}>
             <Button variant="outline-primary">Home</Button>
           </Link>
