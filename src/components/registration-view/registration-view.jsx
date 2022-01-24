@@ -98,10 +98,7 @@ function RegistrationView(props) {
             <Form.Control type='date' value={birth} onChange={e => setBirth(e.target.value)} />
           </Form.Group>
 
-          <Button variant='primary' type='submit' onClick={handleSubmit}>Submit</Button>
-          <Link to='/'>
-            <Button variant='primary' type='submit'>Login</Button>
-          </Link>
+          <Button variant='primary' type='submit' onClick={handleSubmit}>Register</Button>
         </Form>
       </Col>
     </Row>
