@@ -124,7 +124,6 @@ class MainView extends React.Component {
           <Route exact path="/register" render={() => {
             if (user) return <Redirect to="/" />
             return <Col>
-              <NavBarView />
               <RegistrationView />
             </Col>
           }} />
