@@ -59,7 +59,7 @@ class MovieView extends React.Component {
         <br /><br /><br /><br /><br />
         <Row>
           <Card align="center">
-            <Card.Img variant="top" src={movie.Poster} crossOrigin="true" width="250" height="350" />
+            <Card.Img variant="top" src={movie.Poster} crossOrigin="true" />
             <Card.Body>
               <Card.Title>{movie.Title}</Card.Title>
               <Card.Text>{movie.Description}</Card.Text>
@@ -77,16 +77,19 @@ class MovieView extends React.Component {
                 <span className="label">Featured : </span>
                 <span className="value">{movie.Featured}</span>
               </div>
+              <br />
               <div className="movie-releaseyear">
                 <span className="label">Release Year : </span>
                 <span className="value">{movie.ReleaseYear}</span>
               </div>
+              <br />
               <div className="movie-actors">
                 <span className="label">Actors : </span>
                 <span className="value">{movie.Actors}</span>
               </div>
             </Card.Body>
           </Card>
+          <br />
           <div align="center">
             <Button variant="outline-primary" className="btn-outline-primary" onClick={() => { onBackClick(null); }}>Back</Button>
             <Button variant="outline-success" className="btn-outline-primary" onClick={() => { this.addToFavs(); }}>Add to Favorite</Button>
