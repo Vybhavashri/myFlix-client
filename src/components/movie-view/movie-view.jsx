@@ -63,16 +63,28 @@ class MovieView extends React.Component {
             <Card.Body>
               <Card.Title>{movie.Title}</Card.Title>
               <Card.Text>{movie.Description}</Card.Text>
-              <label>Genre:</label>
+              <label>Genre : </label>
               <Link to={`/movies/genre/${movie.Genre.Name}`}>
                 <span className="value">{movie.Genre.Name}</span>
               </Link>
               <br />
-              <label>Director:</label>
+              <label>Director : </label>
               <Link to={`/movies/directors/${movie.Director.Name}`}>
                 <span className="value">{movie.Director.Name}</span>
               </Link>
               <br />
+              <div className="movie-featured">
+                <span className="label">Featured : </span>
+                <span className="value">{movie.Featured}</span>
+              </div>
+              <div className="movie-releaseyear">
+                <span className="label">Release Year : </span>
+                <span className="value">{movie.ReleaseYear}</span>
+              </div>
+              <div className="movie-actors">
+                <span className="label">Actors : </span>
+                <span className="value">{movie.Actors}</span>
+              </div>
             </Card.Body>
           </Card>
           <div align="center">
