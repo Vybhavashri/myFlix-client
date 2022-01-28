@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 
 import { Row, Col, Form, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
-function RegistrationView(props) {
+function RegistrationView() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [emailID, setEmailID] = useState('');
