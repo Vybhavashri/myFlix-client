@@ -1,23 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Container, Card, Row, Button } from "react-bootstrap";
-
-import "./director-view.scss";
+import Moment from 'moment';
 
 function DirectorView(props) {
   const { Director, onBackClick } = props;
 
   return (
     < Container >
-      <br /><br /><br /><br /><br />
+      <br /><br />
       <Row className="director-view">
-        <Card align="center">
+        <Card className=" movie_card_background bg-dark text-white movie_card">
           <Card.Body>
             <Card.Title>{Director.Name}</Card.Title>
             <Card.Text>{Director.Bio}</Card.Text>
-            <Card.Text>{Director.Birth}</Card.Text>
+            <Card.Text>{Moment(Director.Birth).format('DD-MM-YYYY')}</Card.Text>
             <br />
-            <Button variant="outline-primary" className="btn-outline-primary" onClick={() => { onBackClick(null); }}>Back</Button>
+            <Button variant="light" className="button" onClick={() => { onBackClick(null); }}>Back</Button>
           </Card.Body>
         </Card>
       </Row>
