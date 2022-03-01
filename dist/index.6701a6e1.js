@@ -23239,7 +23239,7 @@ class MovieView extends _reactDefault.default.Component {
                 }
             }).then((response)=>{
                 alert("The movie is now on your list.");
-                window.open('/index.html', '_self');
+                window.open('/movies', '_self');
             }).catch(function(error) {
                 console.log(error);
             });
@@ -23252,7 +23252,7 @@ class MovieView extends _reactDefault.default.Component {
                 }
             }).then((response)=>{
                 alert("The movie is now deleted from your list.");
-                window.open('/index.html', '_self');
+                window.open('/movies', '_self');
             }).catch(function(error) {
                 console.log(error);
             });
@@ -46324,7 +46324,7 @@ class ProfileView extends _reactDefault.default.Component {
                 alert("Profile has been deleted!");
                 localStorage.removeItem("user");
                 localStorage.removeItem("token");
-                window.open(`/index.html`, "_self");
+                window.open(`/movies`, "_self");
             }).catch(function(error) {
                 console.log(error);
             });
