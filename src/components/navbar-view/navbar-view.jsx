@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function NavBarView() {
   const user = localStorage.getItem("user");
 
-  onLoggedOut = () => {
+  const onLoggedOut = () => {
     localStorage.clear();
     window.open("/", "_self");
   };
