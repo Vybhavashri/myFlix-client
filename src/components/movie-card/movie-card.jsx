@@ -1,47 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Card, Container, Row } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 class MovieCard extends React.Component {
 
-  onLoggedOut() {
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-    this.setState({
-      user: null,
-    });
-    window.open("/", "_self");
-  }
-
   render() {
-    const { movie } = this.props;
+    let { movie, userData } = this.props;
 
     return (
-      <Container>
-        <br /><br /><br /><br /><br />
-        <Row>
-          <Card align="center">
-            <Card.Img variant="top" src={movie.Poster} crossOrigin="true" width="250" height="350" />
-            <Card.Body>
-              <Card.Title>{movie.Title}</Card.Title>
-              <Card.Text>{movie.Description}</Card.Text>
-              <br />
-              <Link to={`/movies/${movie._id}`}>
-                <Button variant="link">Show more</Button>
-              </Link>
-            </Card.Body>
-          </Card>
-        </Row>
-      </Container>
+      <Card className="bg-transparent movie_card_background ">
+        <Card key={movie._id} className="bg-dark text-white movie_card">
+          <Card.Img variant="top" src={movie.Poster} crossOrigin="true" alt="Card image" className="card_image" />
+          <Card.ImgOverlay className="image-overlay">
+            <Card.Title className="card-title_image-overlay ">{movie.Title}</Card.Title>
+          </Card.ImgOverlay>
+        </Card>
+        <Link to={`/movies/${movie._id}`} className="text-right text-white">
+          <Button variant="link" size="lg">Show more...</Button>
+        </Link>
+      </Card>
     );
   }
 }
 
 MovieCard.propTypes = {
   movie: PropTypes.shape({
+    _id: PropTypes.string.isRequired,
     Title: PropTypes.string.isRequired,
-    Description: PropTypes.string.isRequired
+    Description: PropTypes.string.isRequired,
+    Director: PropTypes.shape({
+      Name: PropTypes.string.isRequired,
+      Bio: PropTypes.string.isRequired,
+      Birth: PropTypes.string.isRequired
+    }),
+    Genre: PropTypes.shape({
+      Name: PropTypes.string.isRequired,
+      Description: PropTypes.string.isRequired
+    }),
+    Poster: PropTypes.string.isRequired,
   }).isRequired
 };
 
