@@ -40,7 +40,7 @@ class ProfileView extends React.Component {
           const data = response.data;
           console.log(this.state.Username);
           alert("Profile is updated!");
-          window.location.reload();
+          window.open(`/`, "_self");
         })
         .catch(function (error) {
           console.log(error);
