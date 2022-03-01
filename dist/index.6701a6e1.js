@@ -46309,7 +46309,7 @@ class ProfileView extends _reactDefault.default.Component {
                 });
                 localStorage.setItem("user", this.state.Username);
                 alert("Profile is updated!");
-                window.open(`/index.html`, "_self");
+                window.open(`/users/${Username}`, "_self");
             }).catch(function(error) {
                 console.log(error);
             });
@@ -46324,7 +46324,7 @@ class ProfileView extends _reactDefault.default.Component {
                 alert("Profile has been deleted!");
                 localStorage.removeItem("user");
                 localStorage.removeItem("token");
-                window.open(`/movies`, "_self");
+                window.open(`/`, "_self");
             }).catch(function(error) {
                 console.log(error);
             });
