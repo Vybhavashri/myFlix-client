@@ -3,6 +3,9 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { Row, Col } from 'react-bootstrap';
+
+import './login-view.scss';
 
 function LoginView(props) {
   const [username, setUsername] = useState('');
@@ -53,26 +56,40 @@ function LoginView(props) {
 
   return (
     <Form>
-      <Form.Group controlId="formUsername">
-        <Form.Label>Username:</Form.Label>
-        <Form.Control type="text" placeholder="Enter username" value={username} onChange={e => setUsername(e.target.value)} />
-        {/* code added here to display validation error */}
-        {usernameErr && <p>{usernameErr}</p>}
-      </Form.Group>
-
-      <Form.Group controlId="formPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
-        {/* code added here to display validation error */}
-        {passwordErr && <p>{passwordErr}</p>}
-      </Form.Group>
-      <Button variant="primary" type="submit" onClick={handleSubmit}>
-        Submit
-      </Button>
-      <Link to={'/register'}>
-        <Button variant='primary' type='submit'>Register</Button>
-      </Link>
-    </Form>
+      <br /><br />
+      <Row>
+        <Col md={8}>
+          <Form.Group controlId="formUsername" >
+            <Form.Label>Username:</Form.Label>
+            <Form.Control type="text" placeholder="Enter username" value={username} onChange={e => setUsername(e.target.value)} />
+            {/* code added here to display validation error */}
+            {usernameErr && <p>{usernameErr}</p>}
+          </Form.Group >
+        </Col>
+        <br />
+        <Col md={8}>
+          <Form.Group controlId="formPassword">
+            <Form.Label>Password:</Form.Label>
+            <Form.Control type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
+            {/* code added here to display validation error */}
+            {passwordErr && <p>{passwordErr}</p>}
+          </Form.Group>
+        </Col>
+      </Row>
+      <br />
+      <Row>
+        <Col md={4}>
+          <Button variant="primary" className="btn btn-primary btn-block" type="submit" onClick={handleSubmit}>
+            Login
+          </Button>
+        </Col>
+        <Col md={4}>
+          <Link to={'/register'}>
+            <Button variant='info' className="btn btn-info btn-block">Register</Button>
+          </Link>
+        </Col>
+      </Row>
+    </Form >
   )
 }
 
