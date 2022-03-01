@@ -73,8 +73,8 @@ class MovieView extends React.Component {
             </div>
           </Card.Body>
           {userData.FavouriteMovies.includes(movie._id)
-            ? <Button className="button" variant="danger" type="submit" onClick={removeFromFavs}>Remove favourites</Button>
-            : <Button className="button" variant="success" type="submit" onClick={addToFavs}>Add to favourites</Button>
+            ? <Button className="button" variant="danger" onClick={removeFromFavs}>Remove favourites</Button>
+            : <Button className="button" variant="success" onClick={addToFavs}>Add to favourites</Button>
           }
           <br />
           <Button className="button" variant="dark" onClick={() => { onBackClick(null); }}>Back</Button>
