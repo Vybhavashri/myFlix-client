@@ -27,7 +27,7 @@ function NavBarView() {
             Edit Profile : <Link size="lg" to={`/users/${user}`}>{user}</Link>
           </NavItem>
           <Nav.Link className="d-flex">
-            <Button variant="primary" className="btn-primary" onClick={() => { this.onLoggedOut() }}>Logout</Button>
+            <Button variant="primary" className="btn-primary" onClick={() => { onLoggedOut() }}>Logout</Button>
           </Nav.Link>
         </Container>
       </Navbar>
