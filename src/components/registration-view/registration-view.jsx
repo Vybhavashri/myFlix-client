@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import { Row, Col, Form, Button } from 'react-bootstrap';
 
 function RegistrationView(props) {
-  console.log('props: ', props);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [emailID, setEmailID] = useState('');
@@ -60,7 +59,6 @@ function RegistrationView(props) {
       })
         .then(response => {
           const data = response.data;
-          console.log(data);
           alert('Registration successful, please login!');
           window.open('/', '_self');
         })
