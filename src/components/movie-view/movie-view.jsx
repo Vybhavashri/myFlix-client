@@ -6,96 +6,79 @@ import { Link } from 'react-router-dom';
 
 class MovieView extends React.Component {
 
-  addToFavs() {
-    const Username = localStorage.getItem("user");
-    const token = localStorage.getItem("token");
-    const { movie } = this.props;
-
-    axios.post(`https://myflix-moviedatabaseapp.herokuapp.com/users/${Username}/movies/${movie._id}`, {
-      headers: { Authorization: `Bearer ${token}` },
-    })
-      .then((response) => {
-        console.log(response);
-        console.log(movie._id);
-        alert("The movie is now on your list.");
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
-
-  removeFromFavs() {
-    const Username = localStorage.getItem("user");
-    const token = localStorage.getItem("token");
-    const { movie } = this.props;
-
-    axios.delete(`https://myflix-moviedatabaseapp.herokuapp.com/users/${Username}/delete/${movie._id}`, {
-      headers: { Authorization: `Bearer ${token}` },
-    })
-      .then((response) => {
-        console.log(response);
-        console.log(movie._id);
-        alert("The movie is now deleted from your list.");
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
-
-  onLoggedOut() {
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-    this.setState({
-      user: null,
-    });
-    window.open("/", "_self");
-  }
-
   render() {
-    const { movie, onBackClick } = this.props;
+    const { movie, onBackClick, userData } = this.props;
+    const Username = localStorage.getItem('user');
+    const token = localStorage.getItem('token');
+
+    const addToFavs = (e) => {
+      e.preventDefault();
+      axios.post(`https://myflix-moviedatabaseapp.herokuapp.com/users/${Username}/movies/${movie._id}`, {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+        .then((response) => {
+          alert("The movie is now on your list.");
+          window.open('/movies/' + movie._id, '_self');
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
+
+    const removeFromFavs = (e) => {
+      e.preventDefault();
+      axios.delete(`https://myflix-moviedatabaseapp.herokuapp.com/users/${Username}/delete/${movie._id}`, {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+        .then((response) => {
+          alert("The movie is now deleted from your list.");
+          window.open('/movies/' + movie._id, '_self');
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
 
     return (
       < Container>
-        <br /><br /><br /><br /><br />
-        <Row>
-          <Card align="center">
-            <Card.Img variant="top" src={movie.Poster} crossOrigin="true" />
-            <Card.Body>
-              <Card.Title>{movie.Title}</Card.Title>
-              <Card.Text>{movie.Description}</Card.Text>
-              <label>Genre : </label>
-              <Link to={`/movies/genre/${movie.Genre.Name}`}>
-                <span className="value">{movie.Genre.Name}</span>
-              </Link>
-              <br />
-              <label>Director : </label>
-              <Link to={`/movies/directors/${movie.Director.Name}`}>
-                <span className="value">{movie.Director.Name}</span>
-              </Link>
-              <br />
-              <div className="movie-featured">
-                <span className="label">Featured : </span>
-                <span className="value">{movie.Featured}</span>
-              </div>
-              <br />
-              <div className="movie-releaseyear">
-                <span className="label">Release Year : </span>
-                <span className="value">{movie.ReleaseYear}</span>
-              </div>
-              <br />
-              <div className="movie-actors">
-                <span className="label">Actors : </span>
-                <span className="value">{movie.Actors}</span>
-              </div>
-            </Card.Body>
-          </Card>
+        <br /><br />
+        <Card align="center">
+          <Card.Img variant="top" src={movie.Poster} crossOrigin="true" />
+          <Card.Body>
+            <Card.Title>{movie.Title}</Card.Title>
+            <Card.Text>{movie.Description}</Card.Text>
+            <label>Genre : </label>
+            <Link to={`/movies/genre/${movie.Genre.Name}`}>
+              <span className="value">{movie.Genre.Name}</span>
+            </Link>
+            <br />
+            <label>Director : </label>
+            <Link to={`/movies/directors/${movie.Director.Name}`}>
+              <span className="value">{movie.Director.Name}</span>
+            </Link>
+            <br />
+            <div className="movie-featured">
+              <span className="label">Featured : </span>
+              <span className="value">{movie.Featured}</span>
+            </div>
+            <br />
+            <div className="movie-releaseyear">
+              <span className="label">Release Year : </span>
+              <span className="value">{movie.ReleaseYear}</span>
+            </div>
+            <br />
+            <div className="movie-actors">
+              <span className="label">Actors : </span>
+              <span className="value">{movie.Actors}</span>
+            </div>
+          </Card.Body>
+          {userData.FavouriteMovies.includes(movie._id)
+            ? <Button className="button" variant="danger" type="submit" onClick={removeFromFavs}>Remove favourites</Button>
+            : <Button className="button" variant="success" type="submit" onClick={addToFavs}>Add to favourites</Button>
+          }
           <br />
-          <div align="center">
-            <Button variant="outline-primary" className="btn-outline-primary" onClick={() => { onBackClick(null); }}>Back</Button>
-            <Button variant="outline-success" className="btn-outline-primary" onClick={() => { this.addToFavs(); }}>Add to Favorite</Button>
-            <Button variant="outline-danger" className="btn-outline-primary" onClick={() => { this.removeFromFavs(); }}>Remove from Favorite</Button>
-          </div>
-        </Row>
+          <Button className="button" variant="dark" onClick={() => { onBackClick(null); }}>Back</Button>
+        </Card>
       </Container >
     );
   }
