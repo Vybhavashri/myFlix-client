@@ -44437,7 +44437,7 @@ var _reactBootstrap = require("react-bootstrap");
 var _reactRouterDom = require("react-router-dom");
 function NavBarView() {
     const user = localStorage.getItem("user");
-    onLoggedOut = ()=>{
+    const onLoggedOut = ()=>{
         localStorage.clear();
         window.open("/", "_self");
     };
