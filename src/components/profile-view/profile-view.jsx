@@ -37,9 +37,8 @@ class ProfileView extends React.Component {
           });
 
           localStorage.setItem("user", this.state.Username);
-          console.log(this.state.Username);
           alert("Profile is updated!");
-          window.open(`https://621db540469dea0007768987--my-flix-client.netlify.app/users/${Username}`, "_self");
+          window.open(`/index.html`, "_self");
         })
         .catch(function (error) {
           console.log(error);
@@ -56,7 +55,7 @@ class ProfileView extends React.Component {
           alert("Profile has been deleted!");
           localStorage.removeItem("user");
           localStorage.removeItem("token");
-          window.open(`/`, "_self");
+          window.open(`/index.html`, "_self");
         })
         .catch(function (error) {
           console.log(error);
@@ -131,7 +130,7 @@ class ProfileView extends React.Component {
 
               <Form.Group>
                 <Form.Label>Birth</Form.Label>
-                <Form.Control type="date" name="Birth" onChange={(e) => setBirth(e.target.value)} />
+                <Form.Control type="date" name="Birth" onChange={(e) => setBirth(e.target.value)} required />
               </Form.Group>
               <br />
               <Button variant="info" className="button" type="submit">Update Profile</Button>
