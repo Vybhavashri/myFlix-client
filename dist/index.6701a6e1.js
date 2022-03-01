@@ -44441,7 +44441,7 @@ function NavBarView() {
         localStorage.clear();
         window.open("/", "_self");
     };
-    home = ()=>{
+    const home = ()=>{
         window.open("/", "_self");
     };
     return(/*#__PURE__*/ _jsxRuntime.jsx(_jsxRuntime.Fragment, {
@@ -44479,7 +44479,7 @@ function NavBarView() {
                                     variant: "light",
                                     className: "button",
                                     onClick: ()=>{
-                                        this.home();
+                                        home();
                                     },
                                     __source: {
                                         fileName: "src/components/navbar-view/navbar-view.jsx",
