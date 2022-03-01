@@ -18,7 +18,7 @@ class MovieView extends React.Component {
       })
         .then((response) => {
           alert("The movie is now on your list.");
-          window.open('', '_self');
+          window.open('/', '_self');
         })
         .catch(function (error) {
           console.log(error);
