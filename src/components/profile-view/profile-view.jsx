@@ -55,7 +55,7 @@ class ProfileView extends React.Component {
           alert("Profile has been deleted!");
           localStorage.removeItem("user");
           localStorage.removeItem("token");
-          window.open(`/index.html`, "_self");
+          window.open(`/movies`, "_self");
         })
         .catch(function (error) {
           console.log(error);
