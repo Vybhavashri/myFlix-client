@@ -10,7 +10,7 @@ function NavBarView() {
     window.open("/", "_self");
   };
 
-  home = () => {
+  const home = () => {
     window.open("/", "_self")
   }
 
@@ -20,7 +20,7 @@ function NavBarView() {
         <Container fluid>
           <Navbar.Brand>
             <Nav.Link className="d-flex">
-              <Button variant="light" className="button" onClick={() => { this.home() }}>MyFlix</Button>
+              <Button variant="light" className="button" onClick={() => { home() }}>MyFlix</Button>
             </Nav.Link>
           </Navbar.Brand>
           <NavItem className="text-white">
