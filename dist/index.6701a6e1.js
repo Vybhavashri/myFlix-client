@@ -23486,7 +23486,6 @@ class MovieView extends _reactDefault.default.Component {
                         userData.FavouriteMovies.includes(movie._id) ? /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
                             className: "button",
                             variant: "danger",
-                            type: "submit",
                             onClick: removeFromFavs,
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
@@ -23497,7 +23496,6 @@ class MovieView extends _reactDefault.default.Component {
                         }) : /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
                             className: "button",
                             variant: "success",
-                            type: "submit",
                             onClick: addToFavs,
                             __source: {
                                 fileName: "src/components/movie-view/movie-view.jsx",
