@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
+import { Link } from 'react-router-dom';
+
 import { Row, Col, Form, Button } from 'react-bootstrap';
 
-function RegistrationView() {
+function RegistrationView(props) {
+  console.log('props: ', props);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [emailID, setEmailID] = useState('');
@@ -69,9 +72,10 @@ function RegistrationView() {
   };
 
   return (
-    <Row className='mt-5'>
-      <Col md={12}>
-        <Form>
+    <Form>
+      <Row>
+        <Col md={8}>
+          <br /><br /><br />
           <h3>Sign Up</h3>
           <p></p>
           <Form.Group controlId='formUsername' className='reg-form-inputs'>
@@ -96,11 +100,20 @@ function RegistrationView() {
             <Form.Label>Birthday</Form.Label>
             <Form.Control type='date' value={birth} onChange={e => setBirth(e.target.value)} />
           </Form.Group>
-
-          <Button variant='primary' type='submit' onClick={handleSubmit}>Register</Button>
-        </Form>
-      </Col>
-    </Row>
+        </Col>
+      </Row>
+      <br />
+      <Row>
+        <Col md={4}>
+          <Button variant='info' type='submit' className="btn btn-info btn-block" onClick={handleSubmit}>Register</Button>
+        </Col>
+        <Col md={4}>
+          <Link to={'/'}>
+            <Button variant='primary' className="btn btn-primary btn-block">Login</Button>
+          </Link>
+        </Col>
+      </Row>
+    </Form >
   );
 }
 
