@@ -37,10 +37,9 @@ class ProfileView extends React.Component {
           });
 
           localStorage.setItem("user", this.state.Username);
-          const data = response.data;
           console.log(this.state.Username);
           alert("Profile is updated!");
-          window.open(`/`, "_self");
+          window.open(`https://621db540469dea0007768987--my-flix-client.netlify.app/users/${Username}`, "_self");
         })
         .catch(function (error) {
           console.log(error);
@@ -54,7 +53,6 @@ class ProfileView extends React.Component {
         headers: { Authorization: `Bearer ${token}` },
       })
         .then((response) => {
-          console.log(response);
           alert("Profile has been deleted!");
           localStorage.removeItem("user");
           localStorage.removeItem("token");
