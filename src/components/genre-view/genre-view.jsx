@@ -1,25 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
-import axios from "axios";
 import { Container, Card, Row, Button } from "react-bootstrap";
 
-import { Link } from 'react-router-dom';
-
-import "./genre-view.scss";
 
 function GenreView(props) {
   const { Genre, onBackClick } = props;
 
   return (
     <Container>
-      <br /><br /><br /><br /><br />
+      <br /><br />
       <Row className="genre-view">
-        <Card align="center">
+        <Card className=" bg-dark text-white movie_card">
           <Card.Body>
             <Card.Title>{Genre.Name}</Card.Title>
             <Card.Text>{Genre.Description}</Card.Text>
             <br />
-            <Button variant="outline-primary" className="btn-outline-primary" onClick={() => { onBackClick(null); }}>Back</Button>
+            <Button variant="light" className="button" onClick={() => { onBackClick(null); }}>Back</Button>
           </Card.Body>
         </Card>
       </Row>
@@ -31,7 +27,8 @@ GenreView.propTypes = {
   Genre: PropTypes.shape({
     Name: PropTypes.string.isRequired,
     Description: PropTypes.string.isRequired
-  }).isRequired
+  }).isRequired,
+  onBackClick: PropTypes.func.isRequired
 };
 
 export default GenreView;
