@@ -44522,7 +44522,7 @@ function NavBarView() {
                                 variant: "primary",
                                 className: "btn-primary",
                                 onClick: ()=>{
-                                    this.onLoggedOut();
+                                    onLoggedOut();
                                 },
                                 __source: {
                                     fileName: "src/components/navbar-view/navbar-view.jsx",
