@@ -18,7 +18,7 @@ class MovieView extends React.Component {
       })
         .then((response) => {
           alert("The movie is now on your list.");
-          window.open('/movies/' + movie._id, '_self');
+          window.location.reload();
         })
         .catch(function (error) {
           console.log(error);
@@ -32,7 +32,7 @@ class MovieView extends React.Component {
       })
         .then((response) => {
           alert("The movie is now deleted from your list.");
-          window.open('/movies/' + movie._id, '_self');
+          window.location.reload();
         })
         .catch(function (error) {
           console.log(error);
