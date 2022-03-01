@@ -1,8 +1,8 @@
-.my-flix {
-  color: steelblue;
+.myFlix-body {
+  background-color: #cecdcd;
 }
-
-
-
-
+body {
+  background: #cecdcd !important;
+  font-weight: 400;
+}
 /*# sourceMappingURL=index.caa67093.css.map */
