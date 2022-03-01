@@ -18,7 +18,7 @@ class MovieView extends React.Component {
       })
         .then((response) => {
           alert("The movie is now on your list.");
-          window.open('https://621db540469dea0007768987--my-flix-client.netlify.app/movies/' + movie._id, '_self');
+          window.open('/index.html', '_self');
         })
         .catch(function (error) {
           console.log(error);
@@ -32,7 +32,7 @@ class MovieView extends React.Component {
       })
         .then((response) => {
           alert("The movie is now deleted from your list.");
-          window.open('https://621db540469dea0007768987--my-flix-client.netlify.app//movies/' + movie._id, '_self');
+          window.open('/index.html', '_self');
         })
         .catch(function (error) {
           console.log(error);
