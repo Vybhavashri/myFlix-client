@@ -23239,7 +23239,7 @@ class MovieView extends _reactDefault.default.Component {
                 }
             }).then((response)=>{
                 alert("The movie is now on your list.");
-                window.open('/movies', '_self');
+                window.open('/movies/' + movie._id, '_self');
             }).catch(function(error) {
                 console.log(error);
             });
@@ -23252,7 +23252,7 @@ class MovieView extends _reactDefault.default.Component {
                 }
             }).then((response)=>{
                 alert("The movie is now deleted from your list.");
-                window.open('/movies', '_self');
+                window.open('/movies/' + movie._id, '_self');
             }).catch(function(error) {
                 console.log(error);
             });
