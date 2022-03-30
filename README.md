@@ -1,4 +1,4 @@
-# myFlix-client [![Netlify Status](https://api.netlify.com/api/v1/badges/c620301c-15de-48db-a787-c14c3896f93f/deploy-status)](https://app.netlify.com/sites/myflix-react-app/deploys)
+# myFlix-client 
 MyFlix is a client side application built using ReactJS for its existing server-side code. MyFlix app is a responsive app that displays a list of movies for registered users. Users are allowed to view the movie details, favorite movies and search by title.
 
 This project uses React bootstrap.
